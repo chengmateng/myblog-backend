@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>love line with Yanan</title>
+
+<style type="text/css">
+
+@font-face {
+    font-family: digit;
+    src: url('digital-7_mono.ttf') format("truetype");
+}
+@font-face {
+    font-family: 'JiangxiZhuokai';
+    src: url('jiangxizhuokai.ttf') format('truetype');
+}
+/* 添加自定义字体样式 */
+#customFontSection {
+    font-family: 'JiangxiZhuokai', sans-serif;
+}
+/* messages 块字体样式 */
+#messages {
+    font-family: 'JiangxiZhuokai', sans-serif;
+}
+
+/* 脚注 */
+#footer {
+    text-align: center;
+    color: #666;
+    padding: 10px;
+    background-color: #ffe;
+    margin-top: auto; /* 保证脚注总是在页面底部 */
+}
+
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+<!-- BGM区域 -->
+<embed src="https://www.joy127.com/url/21465.mp3" width="0" height="0" loop="-1" autostart="true"> </embed>
+
+<!-- 文字区域 -->
+<div id="mainDiv">
+    <div id="content">
+        <div id="code">
+            <div id="customFontSection">
+                2007-2010 是缘分的开始, 是我们的初中时代<br /> 
+                <span class="keyword">有美一人, 清扬婉兮</span><br />
+                <br />
+                2010-2013 是缘分的延续, 是我们的高中时代<br />
+                <span class="keyword">邂逅相遇, 适我愿兮</span><br />
+                
+                <br />
+                2013-2017 我们情定中南, 是我们的大学时代<br />
+                <br />
+                <span class="keyword">独立寒秋, 湘江北去, 橘子洲头</span><br />
+                <span class="keyword">恰同学少年, 风华正茂</span><br />
+                <br />
+                2018-2021 我们远隔重洋, 昼夜交错<br />
+                <span class="keyword">柔情似水，佳期如梦，忍顾鹊桥归路</span><br />
+                <br />
+                2021 我们一起到美国读博<br />
+				<br />
+                <span class="keyword">看万山红遍，层林尽染</span><br />
+                <span class="keyword">鹰击长空，鱼翔浅底，万类霜天竞自由</span><br />
+                <br />
+                <hr />
+                <span class="keyword">余生只愿与君度</span><br />
+                <span class="keyword">情深不负共白头 </span><br />
+                <p style="white-space: pre;">                           --马腾</p>
+            </div>
+        </div>
+        <div id="loveHeart">
+            <canvas id="garden"></canvas>
+            <div id="words" class="jiangxi-font">
+                <div id="messages">
+                    相遇，相知，相恋...
+                    <div id="elapseClock"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+
+//起始时间 
+together.setFullYear(2007, 9, 9);//1.23；3.29 年月日
+together.setHours(12);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+    var msg = document.createElement("div");
+    msg.id = "errorMsg";
+    msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+    document.body.appendChild(msg);
+    $("#code").css("display", "none");
+    $("#copyright").css("position", "absolute");
+    $("#copyright").css("bottom", "10px");
+    document.execCommand("stop");
+} else {
+    setTimeout(function () {
+        startHeartAnimation();
+    }, 5000);
+
+    timeElapse(together);
+    setInterval(function () {
+        timeElapse(together);
+    }, 500);
+
+    adjustCodePosition();
+    $("#code").typewriter();
+}
+</script>
+
+<!-- 脚注 -->
+<div id="footer">
+  <p>Made for Yanan Bo</p>
+</div>
+</body>
+</html>

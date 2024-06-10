@@ -1,0 +1,24 @@
+
+//![DSC_0037.JPG](https://i.loli.net/2020/09/25/yRDbA1p4dhkiNeP.jpg)
+//![Letsrace.png](https://i.loli.net/2020/09/25/e3VWs4ngIfEj9Qt.png)
+//https://i.loli.net/2020/09/25/tOS5TcdKy6Aza2Z.jpg
+
+body {
+  background: url(https://i.loli.net/2020/09/25/1WJkRl7U6HMLZNS.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+}
+
+
+// 修改主体透明度
+.main-inner {
+  background: #fff;
+  opacity: 0.8;
+}
+
+// 修改菜单栏透明度
+.header-inner {
+  opacity: 0.8;
+}
