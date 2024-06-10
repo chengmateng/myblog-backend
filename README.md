@@ -24,9 +24,9 @@ Hexo deploy
 
 * `_config.yml` in the root folder
 
-  * Url: https://github.com/chengmateng/myblog 
+  * Url: https://chengmatengblog.netlify.app
 
-    **Note: `myblog` is the name of the repository**
+    **Note: `url` is the name of my `Netlify` permlink
 
   * Deploy: 
 
